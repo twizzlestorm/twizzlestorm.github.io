@@ -1,0 +1,87 @@
+/* here he go again with this CSS bullshit */
+
+@keyframes grad {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100vh - 1rem);
+}
+
+/********* main */
+
+.main-h1 {
+    color: lemonchiffon;
+    font-size: 72px;
+    margin: 5px;
+}
+
+.main-p {
+    font-size: 24px;
+    color: #ce954b;
+}
+
+.main-p > a {color: burlywood;}
+.main-p > a:visited {color: #a16e2c;}
+.main-p > a:hover {color: #efdcc4;}
+
+.main-body {
+    background: linear-gradient(316deg, #246655, #4e2466);
+    background-size: 400% 400%;
+    animation: grad 30s ease infinite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/********* show */
+
+.show-h2 {
+    color: #fffacd80;
+    text-decoration: underline;
+}
+
+.show-body {
+    background: linear-gradient(316deg, #37134b, #4e2466);
+    background-size: 400% 400%;
+    animation: grad 30s ease infinite;
+    margin: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.show-p {
+    font-size: 20px;
+    color: #90d8c5;
+}
+
+.show-p > a {color: burlywood;}
+.show-p > a:visited {color: #a16e2c;}
+.show-p > a:hover {color: #efdcc4;}
+
+.show-ul > li {
+    color: #649b8c;
+    font-size: 16px;
+}
+
+.show-ul > li > a {
+    color: #649b8c;
+    font-size: 16px;
+}
+
+.show-ul > li > a:visited {
+    color: #40645a;
+    font-size: 16px;
+}
+
+.show-ul-section {
+    color: #649b8c;
+    text-decoration: underline;
+    font-style: oblique;
+}
+
+.show-ul-alt-color {color: #4c786c;}
