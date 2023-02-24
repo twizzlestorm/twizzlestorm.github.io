@@ -59,6 +59,11 @@
     color: #90d8c5;
 }
 
+.show-p-small {
+    color: #90d8c5;
+    font-size: 12px;
+}
+
 .show-p > a {color: burlywood;}
 .show-p > a:visited {color: #a16e2c;}
 .show-p > a:hover {color: #efdcc4;}
