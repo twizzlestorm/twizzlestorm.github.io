@@ -3,12 +3,29 @@
   <meta name="author" content="twzzl" />
   <meta name="description" content="Website tbh" />
   <link rel="stylesheet" href="../style.css" />
-  <title>404</title>
+  <title>me</title>
   <style>body{background: #111111; color:#eeeeee;} a{color: #aaaaaa;} a:visited:{color: #aaaaaa}</style>
 </head>
 
 <div class="center">
-  soon to come!
-  <br>
-  <a href="../index.html">back</a>
+  <h1>ethan twzzl</h1>
+  <img src="me.jpg" width="10%" title="📸: @cragley_ / IG">
+  <p>musician, writer, person <span style="color:#555555">(all pronouns are fine)</span><br>
+    college student majoring in audio technology & minoring in computer science<br>
+    living the only way i know how<br>
+    stick around & find out<br><br>
+    <a href="https://rateyourmusic.com/~natsuki">rateyourmusic</a> ~
+    <a id="d" href="#" onclick="discord()">discord</a> ~
+    <a href="https://instagram.com/twzzl">instagram</a></p>
+    <a href="../index.html">back</a>
 </div>
+
+<script>
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  async function discord() {
+    navigator.clipboard.writeText("ethan#0069");
+    document.getElementById("d").innerHTML = "copied to clipboard!";
+    await sleep(1000);
+    document.getElementById("d").innerHTML = "discord";
+  }
+</script>
