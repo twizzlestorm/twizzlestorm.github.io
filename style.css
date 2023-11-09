@@ -64,9 +64,9 @@
     font-size: 12px;
 }
 
-.show-p > a {color: burlywood;}
-.show-p > a:visited {color: #a16e2c;}
-.show-p > a:hover {color: #efdcc4;}
+p > a {color: burlywood;}
+p > a:visited {color: #a16e2c;}
+p > a:hover {color: #efdcc4;}
 
 .show-ul > li {
     color: #649b8c;
