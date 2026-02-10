@@ -1,20 +1,94 @@
-<!-- We outside -->
-
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0f0f0f;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-<html>
-    <head>
-        <meta property="og:title" content="twzzl dot net"/>
-        <meta property="og:description" content="not sponsored by any licorice brand" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="twzzl" />
-        <meta name="description" content="website" />
-        <link rel="stylesheet" href="style.css" />
-        <title>twzzl.net</title>
-    </head>
+    .container {
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
 
-    <body class="center main-body">
-        <h1 class="main-h1">hi</h1>
-        <p class="main-p"><a href="./show">the twzzl show</a> &mdash; <a href="./me">about me</a> &mdash; <a href="./works">my works</a></p>
-    </body>
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+    }
+
+    .subtitle a {
+      color: #4da3ff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .subtitle a:hover {
+      text-decoration: underline;
+    }
+
+    #randomImage {
+        max-width: 300px;
+        max-height: 300px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        padding: 10px;
+    }   
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ethan (twzzl)</h1>
+    <div class="random-image">
+      <img id="randomImage">
+    </div>
+
+    <div class="subtitle">
+      <a href="./works/music/index.html">Music</a>
+      <a href="page2.html">Bio</a>
+      <a href="mailto:ethan@twzzl.net">Contact</a>
+    </div>
+  </div>
+   <script>
+    function displayRandomImage() {
+      const images = [
+        "./images/image1.jpg",
+        "./images/image2.jpg",
+        "./images/image3.jpg",
+        "./images/image4.jpg",
+        "./images/image5.jpg",
+      ];
+
+      const randomIndex = Math.floor(Math.random() * images.length);
+      const imgElement = document.getElementById("randomImage");
+      imgElement.src = images[randomIndex];
+    }
+    displayRandomImage();
+  </script>
+</body>
 </html>
