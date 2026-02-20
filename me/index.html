@@ -1,27 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="twzzl" />
-  <meta name="description" content="Website tbh" />
-  <link rel="stylesheet" href="../style.css" />
-  <title>me</title>
-  <style>body{background: #111111; color:#eeeeee;} a{color: #aaaaaa;} a:visited:{color: #aaaaaa}</style>
+  <meta charset="UTF-8">
+  <title>Bio</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
+<body>
+  <div class="container">
+    <h1>Bio</h1>
 
-<div class="center">
-  <h1>ethan twzzl</h1>
-  <p>musician, writer, person<br>with varying degrees of intensity<br><br><br>
-    <a href="https://rateyourmusic.com/~natsuki">rateyourmusic</a> ~
-    <a id="d" href="#" onclick="discord()">discord</a> ~
-    <a href="https://instagram.com/twzzl">instagram</a></p>
-    <a href="../index.html">back</a>
-</div>
+    <div class="bio-content">
+      <div class="bio-text">
+        <p>Ethan is an audio engineer and music producer based in the NYC metro area specializing in studio production, live sound engineering, as well as recording and editing for film and television.</p>
+        <p>He is currently completing a Bachelor's degree in Music Production at Ramapo College of New Jersey, studying advanced engineering techniques and applying them in a wide variety of contexts. Ethan has experience in audio and music production from student film projects to full band ensembles, and studied and interned under esteemed jazz drummer Bobby Previte.</p>
+        <p>In addition to audio engineering, Ethan is involved in the college's radio station, WRPR, as the station manager. There, he oversees the functionality and maintenance of broadcasting equipment, as well as collaborating with student DJs with hosting their own freeform radio shows.</p>
+        <p>Ethan produces, mixes, and masters his own music under the name "twzzl", which can be found on all major streaming platforms. Outside of music, some of his many hobbies include writing, video editing, and programming.</p>
+      </div>
 
-<script>
-  const sleep = ms => new Promise(r => setTimeout(r, ms));
-  async function discord() {
-    navigator.clipboard.writeText("@twzzl");
-    document.getElementById("d").innerHTML = "copied to clipboard!";
-    await sleep(1000);
-    document.getElementById("d").innerHTML = "discord";
-  }
-</script>
+      <div class="portrait">
+        <img src="aruba.jpg" alt="Portrait of me">
+      </div>
+    </div>
+
+    <div class="subtitle"><a href="../index.html">Back</a></div>
+    
+  </div>
+</body>
+</html>

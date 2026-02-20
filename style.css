@@ -1,92 +1,181 @@
-/* here he go again with this CSS bullshit */
-
-@keyframes grad {
-    0% {background-position: 0% 50%}
-    50% {background-position: 100% 50%}
-    100% {background-position: 0% 50%}
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #0f0f0f;
+	color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-.center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: calc(100vh - 1rem);
+.container {
+	text-align: center;
+	opacity: 0;
+	animation: fadeIn 1.5s ease forwards;
 }
 
-/********* main */
-
-.main-h1 {
-    color: lemonchiffon;
-    font-size: 72px;
-    margin: 5px;
+h1 {
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
 }
 
-.main-p {
-    font-size: 24px;
-    color: #ce954b;
+.subtitle {
+	font-size: 1.2rem;
 }
 
-.main-p > a {color: burlywood;}
-.main-p > a:visited {color: #a16e2c;}
-.main-p > a:hover {color: #efdcc4;}
-
-.main-body {
-    background: linear-gradient(316deg, #246655, #4e2466);
-    background-size: 400% 400%;
-    animation: grad 30s ease infinite;
-    font-family: Arial, Helvetica, sans-serif;
+.subtitle a {
+	color: #4da3ff;
+	text-decoration: none;
+	margin: 0 10px;
 }
 
-/********* show */
-
-.show-h2 {
-    color: #fffacd80;
-    text-decoration: underline;
+.subtitle a:hover {
+	text-decoration: underline;
 }
 
-.show-body {
-    background: linear-gradient(316deg, #37134b, #4e2466);
-    background-size: 400% 400%;
-    animation: grad 30s ease infinite;
-    margin: 25px;
-    font-family: Arial, Helvetica, sans-serif;
+#randomImage {
+	max-width: 300px;
+	max-height: 300px;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+	padding: 10px;
 }
 
-.show-p {
-    font-size: 20px;
-    color: #90d8c5;
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
-.show-p-small {
-    color: #90d8c5;
-    font-size: 12px;
+.bio-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+	margin-top: 30px;
+	text-align: left;
+	max-width: 900px;
 }
 
-p > a {color: burlywood;}
-p > a:visited {color: #a16e2c;}
-p > a:hover {color: #efdcc4;}
-
-.show-ul > li {
-    color: #649b8c;
-    font-size: 16px;
+.bio-text {
+	flex: 1;
 }
 
-.show-ul > li > a {
-    color: #649b8c;
-    font-size: 16px;
+.bio-text p {
+	line-height: 1.6;
+	margin-bottom: 1rem;
 }
 
-.show-ul > li > a:visited {
-    color: #40645a;
-    font-size: 16px;
+.portrait {
+	flex-shrink: 0;
 }
 
-.show-ul-section {
-    color: #649b8c;
-    text-decoration: underline;
-    font-style: oblique;
+.portrait img {
+	width: 220px;
+	height: auto;
+	object-fit: cover;
 }
 
-.show-ul-alt-color {color: #4c786c;}
+@media (max-width: 768px) {
+	.bio-content {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.bio-text {
+		text-align: center;
+	}
+
+	.portrait img {
+		width: 180px;
+	}
+}
+
+.albums-wrapper {
+  margin: 40px auto 0 auto;   
+  width: 100%;
+  max-width: 1100px;
+  overflow-x: auto;
+  padding: 0 20px 20px 20px; 
+}
+
+.albums {
+  display: flex;
+  gap: 40px;
+  scroll-snap-type: x mandatory;
+}
+
+.album {
+  min-width: 250px;
+  max-width: 250px;
+  flex-shrink: 0;
+  text-align: center;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+.album:hover {
+  transform: scale(1.05);
+}
+
+.album img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.album h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.album p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #cccccc;
+
+  width: 75%;
+  margin: 0 auto;
+}
+
+.albums-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.albums-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.album-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.album-link:hover {
+  cursor: pointer;
+}
+
+.other-works i {
+  font-size: 28px;
+  padding: 2px;
+}
+
+.other-works a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fa-spotify { color: #1DB954; }
+.fa-soundcloud { color: #FF5500; }
+.fa-apple { color: #FA57C1; }
+.fa-bandcamp { color: #629AA0; }
