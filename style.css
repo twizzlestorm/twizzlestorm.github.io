@@ -102,6 +102,10 @@ h1 {
 	.portrait img {
 		width: 180px;
 	}
+
+	.albums {
+		flex-direction: column;
+	}
 }
 
 .albums-wrapper {
